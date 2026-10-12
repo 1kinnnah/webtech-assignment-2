@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tawananyasha Nyamapfene | Software Engineering Student</title>
+  <meta name="description" content="Portfolio and profile page for Tawananyasha Nyamapfene, a Software Engineering student focused on cybersecurity, secure software design, and systems administration.">
+
+  <!-- Tailwind (Play CDN, pinned version): used for the header/nav and the Contact form -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <!-- Custom CSS: page layout, About, Portfolio, Skills, Contact card, footer -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Header + nav: styled with Tailwind utilities ===== -->
+  <header class="bg-slate-900 px-4 py-8 text-center text-white md:px-8 md:py-12">
+    <h1 class="text-3xl font-bold tracking-tight md:text-5xl">Tawananyasha Nyamapfene</h1>
+    <p class="tagline mt-2 text-base text-sky-300 md:text-xl">Software Engineering Student &mdash; Aspiring System Administrator</p>
+    <nav class="mt-6" aria-label="Page sections">
+      <ul class="flex flex-wrap items-center justify-center gap-2 md:gap-4">
+        <li><a class="block rounded-md px-4 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 md:text-base" href="#about">About</a></li>
+        <li><a class="block rounded-md px-4 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 md:text-base" href="#portfolio">Portfolio</a></li>
+        <li><a class="block rounded-md px-4 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 md:text-base" href="#skills">Skills</a></li>
+        <li><a class="block rounded-md px-4 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 md:text-base" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <article>
+        <p>
+          I'm a Software Engineering student with a core passion for cybersecurity, fascinated by how
+          code operates under the hood and how to make digital systems bulletproof. My focus centers on
+          secure software design, finding vulnerability patterns, and understanding the fine line between
+          defensive architecture and offensive security. Outside of my coursework, I'm usually diving into
+          Capture The Flag (CTF) challenges, keeping up with emerging threat vectors, or tinkering with
+          custom security scripts.
+        </p>
+      </article>
+    </section>
+
+    <section id="portfolio" aria-labelledby="portfolio-heading">
+      <h2 id="portfolio-heading">Portfolio Projects</h2>
+
+      <article class="project">
+        <h3>Vulnerability Scanner &amp; Scripting Tool</h3>
+        <p>
+          A Python-based automation tool built to scan networks for open ports, identify misconfigured
+          services, and report basic security risks.
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>Secure Web Application</h3>
+        <p>
+          A full-stack web project engineered with safe authentication mechanisms, demonstrating
+          mitigation techniques against common exploits like SQL injection and Cross-Site Scripting (XSS).
+        </p>
+      </article>
+
+    </section>
+
+    <aside id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Core Technical Skills</h2>
+      <ul>
+        <li>Secure Coding Practices</li>
+        <li>Threat Modeling</li>
+        <li>Python / C++</li>
+        <li>Linux Systems Administration</li>
+        <li>Network Protocols (TCP/IP)</li>
+        <li>Application Security Basics</li>
+      </ul>
+    </aside>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
+
+      <!-- ===== Contact form: styled with Tailwind utilities.
+           Grid: 1 column on phones, 2 columns from md (768px) up. ===== -->
+      <form action="#" method="post" class="grid grid-cols-1 gap-5 md:grid-cols-2">
+
+        <div class="form-group flex flex-col gap-1.5">
+          <label for="name" class="text-sm font-semibold text-slate-700">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="2"
+            placeholder="e.g. Tawananyasha Nyamapfene"
+            class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 placeholder:text-slate-500 focus:border-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-700/40">
+        </div>
+
+        <div class="form-group flex flex-col gap-1.5">
+          <label for="email" class="text-sm font-semibold text-slate-700">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="e.g. yourname@example.com"
+            class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 placeholder:text-slate-500 focus:border-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-700/40">
+        </div>
+
+        <div class="form-group flex flex-col gap-1.5">
+          <label for="phone" class="text-sm font-semibold text-slate-700">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{10}"
+            title="Enter a 10-digit phone number, e.g. 0771742894"
+            placeholder="e.g. 0771742894"
+            class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 placeholder:text-slate-500 focus:border-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-700/40">
+        </div>
+
+        <div class="form-group flex flex-col gap-1.5">
+          <label for="subject" class="text-sm font-semibold text-slate-700">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            minlength="3"
+            placeholder="What is this about?"
+            class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 placeholder:text-slate-500 focus:border-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-700/40">
+        </div>
+
+        <div class="form-group flex flex-col gap-1.5 md:col-span-2">
+          <label for="message" class="text-sm font-semibold text-slate-700">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            minlength="10"
+            placeholder="Write your message here..."
+            class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 placeholder:text-slate-500 focus:border-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-700/40"></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="rounded-md bg-sky-700 px-6 py-3 text-base font-semibold text-white hover:bg-sky-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 md:col-span-2 md:justify-self-start">
+          Send Message
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Email: <a href="mailto:nyamapfenet@africau.edu">nyamapfenet@africau.edu</a> &nbsp;|&nbsp;
+      Phone: <a href="tel:+263771742894">0771742894</a>
+    </p>
+    <p>&copy; 2026 Tawananyasha Nyamapfene. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
